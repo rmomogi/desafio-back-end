@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: tmsweb
+  username: username
   password: 123
   pool: 5
 
