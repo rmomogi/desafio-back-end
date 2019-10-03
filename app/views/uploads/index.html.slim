@@ -1,0 +1,22 @@
+.row.mt-4
+  .col-sm-12
+    .card
+      .card-header
+        h5 Documentos
+      .card-body
+        .row
+          .col-sm-12
+            table.table.table-responsive-sm.table-striped
+              thead
+                tr.row
+                  th.col-sm-3 Documento
+                  th.col-sm-4 Enviado em
+                  th.col-sm-4 Processado em
+                  th.col-sm-1 Status
+              tbody
+                - @documents.each do |item|
+                  tr.row
+                    td.col-sm-3 = item.document.file.filename
+                    td.col-sm-4 = l(item.created_at, format: :date_and_time)
+                    td.col-sm-4 = item.processed_at.blank? ? '' : l(item.processed_at, format: :date_and_time)
+                    td.col-sm-1 = t(item.status)

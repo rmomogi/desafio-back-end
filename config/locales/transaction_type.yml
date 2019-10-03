@@ -1,0 +1,9 @@
+'pt-BR':
+  activerecord:
+    models:
+      city:
+        one: Tipo de transação
+        other: Tipos de transações
+    attributes:
+      transaction_type:
+        name: Nome

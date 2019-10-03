@@ -1,0 +1,15 @@
+= simple_form_for(@resource, :remote => true) do |f|
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-header
+        h5.modal-title Novo Upload
+        button.close type="button" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+      .modal-body
+        .field
+          = f.label :documents
+          br
+          = f.file_field :document, multiple: false
+      .modal-footer
+        button.btn.btn-secondary type="button" data-dismiss="modal" Fechar
+        button.btn.btn-primary type="submit" Enviar

@@ -1,0 +1,9 @@
+'pt-BR':
+  activerecord:
+    models:
+      cnab:
+        one: CNAB
+        other: CNABs
+    attributes:
+      cnab:
+        documents: Documento
